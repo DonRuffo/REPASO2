@@ -1,15 +1,12 @@
 package org.example;
 
 public class ESTUDIANTE {
-    String nombre, cedula, telefono;
-    int edad;
+    String nombre, cedula;
     double nota1, nota2;
     public ESTUDIANTE() {}
-    public ESTUDIANTE(String nombre, String cedula, String telefono, int edad, double nota1, double nota2) {
+    public ESTUDIANTE(String nombre, String cedula, double nota1, double nota2) {
         this.nombre = nombre;
         this.cedula = cedula;
-        this.telefono = telefono;
-        this.edad = edad;
         this.nota1 = nota1;
         this.nota2 = nota2;
     }
@@ -22,13 +19,6 @@ public class ESTUDIANTE {
         this.cedula = cedula;
     }
 
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
-    }
-
-    public void setEdad(int edad) {
-        this.edad = edad;
-    }
 
     public void setNota1(double nota1) {
         this.nota1 = nota1;
@@ -46,14 +36,6 @@ public class ESTUDIANTE {
         return cedula;
     }
 
-    public String getTelefono() {
-        return telefono;
-    }
-
-    public int getEdad() {
-        return edad;
-    }
-
     public double getNota1() {
         return nota1;
     }
@@ -62,19 +44,5 @@ public class ESTUDIANTE {
         return nota2;
     }
 
-    public void imprimirDatos(){
-        System.out.println("Nombre: " + getNombre());
-        System.out.println("Cedula: " + getCedula());
-        System.out.println("Telefono: " + getTelefono());
-        System.out.println("Edad: " + getEdad());
-        System.out.println("Nota1: " + getNota1());
-        System.out.println("Nota2: " + getNota2());
-        double promedio=(getNota1()+getNota2())/2;
-        System.out.println("Promedio: "+promedio);
-        if(promedio>=7){
-            System.out.println("\t El estudiante APRUEBA");
-        }else{
-            System.out.println("\t El estudiante REPRUEBA");
-        }
-    }
+
 }
